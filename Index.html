@@ -1,17 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Jensen Code Archive</title>
+
+    <link rel="stylesheet" href="common.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+
 <body>
-    <nav>
-        <div id="logo">
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+            <div class="logo-icon">
+                🍂
+            </div>
+
+            <div class="logo-text">
+                <span class="logo-title">Jensen Coding Archive</span>
+                <span class="logo-subtitle">Frontend + Backend</span>
+            </div>
+        </a>
+
+        <button class="menu-button" id="menuButton">
+            ☰
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#exercises">Exercises</a></li>
+            <li><a href="#notes">Portfolio</a></li>
+        </ul>
+
+    </nav>
+
+
+    <main>
+        <header class="hero" id="home">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+
+                    <h1>
+                        Code archive for
+                        <span>Jensen University</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        A collection of everything I've built during my
+                        programming course — exercises, experiments,
+                        assignments and the occasional bug that somehow
+                        became a feature.
+                    </p>
+
+                    <a href="#exercises" class="hero-button">
+                        Browse exercises
+                        <span>↓</span>
+                    </a>
+
+                </div>
+
+                <aside class="semester-card">
+
+                    <div class="semester-card-top">
+
+                    </div>
+
+                    <h2>Overview</h2>
+
+                    <p class="semester-description">
+                        The collection of exercises, assignments
+                         and projects completed.
+                    </p>
+
+                    <div class="semester-meta">
+
+                        <div>
+                            <span class="meta-number">0</span>
+                            <span class="meta-label">Exercises</span>
+                        </div>
+
+                        <div>
+                            <span class="meta-number">0</span>
+                            <span class="meta-label">Projects</span>
+                        </div>
+
+                        <div>
+                            <span class="meta-number">0</span>
+                            <span class="meta-label">Dairy</span>
+                        </div>
+
+                    </div>
+
+                </aside>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- EXERCISES -->
+
+        <section
+            class="section exercises-section"
+            id="exercises">
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Collection</h2>
+
+                    <p>
+                        Small assignments, projects and
+                        other things.
+                    </p>
+
+                </div>
+
+
+                <div class="filters">
+
+                    <button
+                        class="filter-button active"
+                        data-filter="all">
+                        All
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="html">
+                        HTML / CSS
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="javascript">
+                        JavaScript
+                    </button>
+
+                    <button
+                        class="filter-button"
+                        data-filter="project">
+                        Projects
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="exercise-grid">
+
+                <a
+                    href="exercises/exercise-01.html"
+                    class="exercise-card rust"
+                    data-category="html">
+
+                    <div class="card-top"></div>
+
+                    <div class="card-content">
+
+                        <h3>Dice grid</h3>
+
+                        <p>
+                            Simple exercise to practice css grid and flexbox.
+                        </p>
+
+                    </div>
+
+                    <div class="card-footer">
+
+                        <div class="tags">
+
+                            <span>HTML</span>
+                            <span>CSS</span>
+
+                        </div>
+
+                    </div>
+
+                </a>
+                </a>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <footer>
+
+        <div>
+
+            <p>
+                MY CODING ARCHIVE
+            </p>
+
+            <span>
+                JENSEN · 2026 - 2028
+            </span>
 
         </div>
-        <div class="nav-text"></div>
-        <div class="nav-text"></div>
-    </nav>
+
+        <p class="footer-message">
+            Made with simple HTML · CSS · JavaScript 
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
+
 </html>

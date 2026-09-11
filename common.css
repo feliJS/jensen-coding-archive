@@ -1,0 +1,718 @@
+
+
+:root {
+
+    --background: #211e1a;
+    --background-light: #29241f;
+    --background-dark: #191715;
+
+    --card: #302a24;
+    --card-hover: #383029;
+
+    --border: #4c4238;
+
+    --cream: #e8dfcf;
+    --cream-dark: #c7b9a4;
+
+    --muted: #9f9281;
+
+    --rust: #9c5d3e;
+    --green: #596556;
+    --gold: #ad8752;
+    --wine: #75504c;
+
+    --paper: #d6c8aa;
+    --paper-text: #3b332a;
+
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background:rgba(25, 23, 21, 0.95);
+    color: var(--cream);
+    font-family:
+        "Libre Baskerville",
+        Georgia,
+        serif;
+    min-height: 100vh;
+
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.navbar {
+
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:
+        0
+        clamp(25px, 6vw, 90px);
+    border-bottom:
+        1px solid var(--border);
+    background:
+        rgba(25, 23, 21, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(15px);
+}
+
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+}
+
+
+.logo-title {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.logo-subtitle {
+    font-family: "DM Mono", monospace;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--muted);
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+
+}
+
+
+.nav-links a {
+    font-family: "DM Mono", monospace;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #b7aa99;
+    font-size: 11px;
+}
+
+
+.nav-links a:hover {
+    color: var(--cream);
+}
+
+
+.menu-button {
+    display: none;
+    border: none;
+    background: none;
+    color: var(--cream);
+    font-size: 24px;
+    cursor: pointer;
+
+}
+
+
+.hero {
+    min-height: 570px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border);
+    background-image: url(assets/stardew.png);
+    background-repeat: repeat;
+    background-size: 2000px auto;
+    animation: moving-background 50s linear infinite;
+}
+
+@keyframes moving-background {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 700px -700px;
+    }
+}
+
+
+.hero-content {
+    background: rgba(30, 26, 23);
+    padding: 3rem;
+    border-radius: 10px;
+    opacity: 100%;
+    width: min(
+        1180px,
+        calc(100% - 50px)
+    );
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        1.4fr
+        0.7fr;
+
+    align-items: center;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.hero h1 {
+    font-size:
+        70px;
+    font-weight: 400;
+    letter-spacing: -3px;
+    line-height: 1;
+    margin:
+        18px
+        0
+        24px;
+
+}
+
+
+.hero h1 span {
+    display: block;
+    font-style: italic;
+    color: #c7b499;
+}
+
+
+.hero-description {
+    color: #bcaf9f;
+    line-height: 1.8;
+    max-width: 620px;
+    font-size: 14px;
+
+}
+
+
+.hero-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 32px;
+    padding:
+        13px
+        18px;
+    border-radius: 5px;
+    background: #4b3321;
+    font-family:
+        "DM Mono",
+        monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+.hero-button:hover {
+    background: #6b4f3b;
+}
+
+.semester-card {
+    padding: 25px;
+    border:
+        3px dashed #56493c;
+    border-radius: 10px;
+    box-shadow:
+        0
+        20px
+        50px
+        rgba(0, 0, 0, 0.18);
+
+}
+
+
+.semester-card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+.semester-card h2 {
+    font-size: 1.6rem;
+    font-weight: normal;
+    margin:
+        18px
+        0
+        9px;
+
+}
+
+
+.semester-description {
+    color: var(--muted);
+    font-size: 0.8rem;
+    line-height: 1.6;
+
+}
+
+
+
+
+.semester-meta {
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+    padding-top: 20px;
+}
+
+
+.semester-meta div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+
+.meta-number {
+
+    font-size: 2rem;
+
+}
+
+
+.meta-label {
+    font-family:
+        "DM Mono",
+        monospace;
+    color: var(--muted);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+
+
+
+.section {
+    width: min(
+        1180px,
+        calc(100% - 50px)
+    );
+    margin: auto;
+    padding:
+        100px
+        0;
+
+}
+
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+
+    font-size: 40px;
+    font-weight: normal;
+    margin:
+        10px
+        0;
+
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+}
+
+
+.filter-button {
+    cursor: pointer;
+    padding:
+        8px
+        14px;
+    border:
+        1px dashed #594a3c;
+    border-radius: 50px;
+    background: transparent;
+    color: #aa9d8c;
+    font-family:
+        "DM Mono",
+        monospace;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition:
+        all
+        0.2s ease;
+
+}
+
+
+.filter-button:hover,
+.filter-button.active {
+    background: #49382d;
+    color: var(--cream);
+
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            3,
+            1fr
+        );
+    gap: 17px;
+
+}
+
+
+.exercise-card {
+
+    min-height: 270px;
+    display: flex;
+    flex-direction: column;
+    background: var(--card);
+    border:
+        1.5px solid var(--border);
+    border-top-width: 4px;
+    border-radius: 8px;
+    transition:
+        transform
+        0.25s ease,
+        border-color
+        0.25s ease,
+        background
+        0.25s ease;
+
+}
+
+
+.exercise-card:hover {
+    transform:
+        translateY(-6px);
+    background: #3b3229;
+
+}
+
+
+.exercise-card.rust {
+    border-top-color: var(--rust);
+}
+
+.exercise-card.green {
+    border-top-color: var(--green);
+}
+
+.exercise-card.gold {
+    border-top-color: var(--gold);
+}
+
+.exercise-card.wine {
+    border-top-color: var(--wine);
+}
+
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(assets/stardew.png);
+    background-size: cover;
+    width: 100%;
+    height: 124px;
+    align-items: start;
+
+}
+
+
+.card-content {
+    margin-top: 16px;
+}
+
+
+.card-content h3 {
+ margin-left: 16px;
+    font-size: 1.3rem;
+
+    font-weight: normal;
+
+    margin-bottom: 13px;
+
+}
+
+
+.card-content p {
+    margin-left: 16px;
+    color: #aa9d8c;
+    font-size: 0.8rem;
+    line-height: 1.7;
+
+}
+
+
+.card-footer {
+    margin-left: 16px;
+    margin-top: auto;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+}
+
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+
+.tags span {
+    padding:
+        5px
+        7px;
+    border-radius: 3px;
+    background: #9c723b;
+    color: #0f0e0c;
+    font-family:
+        "DM Mono",
+        monospace;
+        font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.project-section {
+    position: relative;
+    text-align: center;
+    padding-top: 130px;
+    padding-bottom: 130px;
+
+}
+
+
+.project-decoration {
+    margin-bottom: 25px;
+    color: #9a7956;
+
+}
+
+
+
+
+
+footer {
+
+    min-height: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    padding:
+        30px
+        clamp(25px, 6vw, 90px);
+    border-top:
+        1px solid var(--border);
+    background: var(--background-dark);
+
+}
+
+footer > div p {
+    font-size: 12px;
+}
+
+
+footer span,
+.footer-message {
+
+    font-family:
+        "DM Mono",
+        monospace;
+
+    color: #827668;
+    font-size: 9px;
+
+}
+
+
+footer span {
+
+    display: block;
+    margin-top: 5px;
+
+}
+
+.exercise-card.hidden {
+
+    display: none;
+
+}
+
+
+
+
+@media (max-width: 950px) {
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding:
+            90px
+            0;
+
+    }
+
+
+    .semester-card {
+        max-width: 500px;
+
+    }
+
+
+    .exercise-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        min-height: 70px;
+        flex-wrap: wrap;
+        padding:
+            15px
+            25px;
+
+    }
+
+
+    .menu-button {
+        display: block;
+
+    }
+
+
+    .nav-links {
+
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+
+        padding:
+            25px
+            0
+            10px;
+
+    }
+
+
+    .nav-links.open {
+
+        display: flex;
+
+    }
+
+
+    .logo-subtitle {
+
+        display: none;
+
+    }
+
+
+    .section-heading {
+
+        align-items: flex-start;
+        flex-direction: column;
+
+    }
+
+
+    .exercise-grid {
+        grid-template-columns: 1fr;
+
+    }
+
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero-content,
+    .section {
+
+        width:
+            calc(
+                100% - 30px
+            );
+
+    }
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+
+    .semester-meta {
+        gap: 10px;
+    }
+
+}
