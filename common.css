@@ -467,6 +467,11 @@ a {
     background-position: center;
 }
 
+.calendar .card-top {
+    background-image: url(assets/calendar.png);
+    background-repeat: no-repeat;
+}
+
 
 .card-content {
     margin-top: 16px;

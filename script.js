@@ -23,7 +23,7 @@ filterButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        // Remove active class
+        
         filterButtons.forEach(otherButton => {
 
             otherButton.classList.remove("active");
@@ -31,7 +31,7 @@ filterButtons.forEach(button => {
         });
 
 
-        // Add active class
+        
         button.classList.add("active");
 
 
@@ -41,13 +41,13 @@ filterButtons.forEach(button => {
 
         exerciseCards.forEach(card => {
 
-            const category =
-                card.dataset.category;
+            const categories =
+                card.dataset.category.split(" ");
 
 
             if (
                 selectedFilter === "all" ||
-                category === selectedFilter
+                categories.includes(selectedFilter)
             ) {
 
                 card.classList.remove("hidden");
@@ -65,6 +65,3 @@ filterButtons.forEach(button => {
     });
 
 });
-
-
-
