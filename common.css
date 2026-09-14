@@ -461,6 +461,12 @@ a {
 
 }
 
+/*fix so less static..*/
+.dice .card-top {
+    background-image: url(assets/dice.png);
+    background-position: center;
+}
+
 
 .card-content {
     margin-top: 16px;
