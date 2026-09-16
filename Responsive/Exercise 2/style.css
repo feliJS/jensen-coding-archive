@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Containers */
+
+.wide-box {
+    width: 500px;
+    margin-bottom: 30px;
+
+    container-type: inline-size;
+
+    background-color: aqua;
+}
+
+.narrow-box {
+    width: 220px;
+
+    container-type: inline-size;
+
+    background-color: blueviolet;
+}
+
+
+/* Kortets grundläge */
+
+.card {
+    padding: 15px;
+    background-color: white;
+}
+
+.card img {
+    width: 100px;
+    display: block;
+}
+
+.card h3 {
+    margin-bottom: 5px;
+}
+
+.card p {
+    margin-top: 0;
+}
+
+
+/* När containern är minst 400px */
+
+@container (min-width: 400px) {
+
+    .card {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+}
