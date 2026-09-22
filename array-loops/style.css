@@ -1,0 +1,54 @@
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(211, 174, 132);
+    gap: 1rem;
+}
+
+.exercise-box{
+ background-color: white;
+ width: 100%;
+ height: 10rem;
+}
+
+#array-header{
+    text-align: center;
+    color:rgb(87, 61, 30)
+}
+#arrays-1{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    height: 100%;
+}
+
+.firstArrayEx1{
+    background-color: rgb(96, 175, 109);
+}
+
+.lastArrayEx1{
+    background-color: rgb(184, 110, 91);
+}
+
+#arrays-1 div{
+    flex-grow: 1;
+    border: 2px dashed rgb(66, 40, 19);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*EXERCISE 2 ARRAY*/
+
+#arrays-2{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+
+}
+#arrays-2 h1{
+        margin: 0;
+}
