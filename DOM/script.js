@@ -140,3 +140,38 @@ addElementButton.addEventListener("click", function() {
     newParagraph.textContent = "Hej"
     document.querySelector("#box").appendChild(newParagraph)
 })
+
+//divider
+let divider = document.createElement("hr")
+document.body.appendChild(divider)
+
+//WORKSHOP 3 - Kombinera!
+//1
+const tasks = [
+    "Redigera video",
+    "Plugga fullstack",
+    "Dricka kaffe",
+    "Ta en promenad"
+]
+
+const list = document.createElement("ul")
+list.id = "taskList"
+document.body.appendChild(list)
+
+for (const task of tasks) {
+    const li = document.createElement("li")
+    li.textContent = task
+    li.style.backgroundColor = "aqua"
+    li.style.cursor = "pointer"
+
+    li.addEventListener("click", function() {
+        li.classList.toggle("done")
+
+        if (li.classList.contains("done")) {
+            li.style.backgroundColor = "grey"
+        } else {
+            li.style.backgroundColor = "aqua"
+        }
+    })
+    list.appendChild(li)
+}
