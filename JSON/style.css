@@ -1,0 +1,66 @@
+#movie-form{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100vw;
+}
+
+h1{
+    text-align: center;
+    margin: 4px;
+}
+
+#movie-form label{
+    font-size: 1rem
+}
+
+#movie-form input, #movie-form textArea{
+    font-size: 1rem;
+    min-width: 25rem;
+}
+
+#add-movie{
+    background-color: black;
+    color: white;
+    min-height: 3rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#list-button{
+    background-color: aliceblue;
+    min-width: 2.5rem;
+    min-height: 2.5rem;
+    cursor: pointer;
+}
+
+#all-movies{
+    display: flex;
+    max-width: 40rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+#all-movies div{
+    display: flex;
+    background-color: aliceblue;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+
+}
+#all-movies div h1, #all-movies div h2, #all-movies div p{
+    margin: 4px;
+}
