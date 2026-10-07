@@ -10,11 +10,13 @@ const removeLastBtn = document.querySelector("#remove-last-button")
 const titlesBtn = document.querySelector("#title-button")
 
 let movies = []
+
 let counter = 0
 
 form.addEventListener("submit", function(event){
     event.preventDefault()
 
+        
     let titleTrimmed = titleInput.value.trim();
     let directorTrimmed = directorInput.value.trim();
     let reviewTrimmed =  reviewInput.value.trim();
@@ -31,7 +33,7 @@ form.addEventListener("submit", function(event){
 
     for (const movieObj of movies) {
         if(movieObj.title === titleTrimmed){
-            console.log(movieObj);
+            
             
             errorText.textContent = "this movie is already reviews"
             return
@@ -43,6 +45,7 @@ form.addEventListener("submit", function(event){
 
     let movie = {}
     movies.push(movie)
+
     counter += 1
     movieCountShow.textContent = `Current movies: ${counter}`
     movie.title = titleTrimmed
@@ -54,7 +57,7 @@ form.addEventListener("submit", function(event){
     errorText.textContent = ""
 })
 
-console.log(movies);
+
 
 listBtn.addEventListener("click", function(){
         for (const movieObj of movies) {
